@@ -1,0 +1,106 @@
+.Absolute-Parent {
+  display: flex;
+  justify-content: flex-start;
+  width: 200vw;
+}
+
+body{
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.App {
+  text-align: center;
+  background: grey;
+  background: linear-gradient(0deg, rgba(255, 246, 202, 1) 0%, rgba(200, 252, 255, 1) 99%);
+  width: 100vw;
+  transition: transform 0.5s ease-out; /* Add transition for smooth animation */
+}
+
+body.settings-open .App {
+  transform: translateX(-100%); /* Move the App to the left to reveal Settings */
+}
+
+
+/* For settings */
+/*
+.Settings-Parent {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: left 0.5s ease-out; 
+}
+
+body.settings-open .Settings-Parent {
+  left: 0; 
+}
+*/
+
+
+
+
+.App-header {
+  padding-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 200px;
+}
+
+.search-button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #55acee;
+}
+
+.weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: calc(100vh - 200px); /* Adjust 50px as needed to leave space for other elements */
+  overflow-y: auto; /* Enable vertical scrolling if necessary */
+  scrollbar-color: 0;
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+.weather-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+}
+
+.weather-card p {
+  margin: 0;
+}
